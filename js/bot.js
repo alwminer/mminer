@@ -317,7 +317,7 @@ class bot {
       }
 
       if (serverGetNonce == 'AwLight' || nonce == '') {        
-          /*const bagDifficulty = await getBagDifficulty(wax.userAccount);
+          const bagDifficulty = await getBagDifficulty(wax.userAccount);
           const landDifficulty = await getLandDifficulty(wax.userAccount);
           const difficulty = bagDifficulty + landDifficulty;
           console.log('difficulty', difficulty);
@@ -326,15 +326,15 @@ class bot {
           const last_mine_tx = await lastMineTx(mining_account, wax.userAccount, wax.api.rpc);
           console.log('last_mine_tx = ' + last_mine_tx);
           
-          let AwServerMine = 'https://xxx/mine?waxaccount='+wax.userAccount+'&difficulty='+difficulty+'&lastMineTx='+last_mine_tx
+          let AwServerMine = 'https://jai-aw-server.maesodinfo.repl.co/mine?waxaccount='+wax.userAccount+'&difficulty='+difficulty+'&lastMineTx='+last_mine_tx
           const mine_work = await this.postData(AwServerMine, {}, 'GET', { Origin: "" }, 'raw')
           nonce = mine_work.substr(1, 16)          
-          console.log('nonce = ' + nonce);*/
+          console.log('nonce = ' + nonce);
         
-          const mine_work = await background_mine(wax.userAccount)
+          /*const mine_work = await background_mine(wax.userAccount)
           nonce = mine_work.rand_str
-          console.log('AwLight Local Mine : ', nonce)
-          message = 'AwLight Local Mine : ' + nonce
+          console.log('AwLight Local Mine : ', nonce)*/
+          message = 'AwLight Local MineMIKE : ' + nonce
         
       }
       this.appendMessage(`Nonce Success ${message}`)
